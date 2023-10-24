@@ -1,0 +1,5 @@
+!packages/browserify-demo
+!packages/parcel-demo
+!packages/plain-demo
+!packages/puppeteer-demo
+!packages/webpack-demo

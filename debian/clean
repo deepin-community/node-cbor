@@ -1,0 +1,6 @@
+packages/cbor/cbor
+packages/*/dist/
+packages/*/node_modules/
+node_modules/
+*.1
+sovpro-delimited-stream/dist/

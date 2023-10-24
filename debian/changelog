@@ -1,5 +1,49 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-cbor (8.1.0+dfsg+~cs5.2.1-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + node-cbor: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 22 Nov 2022 14:18:51 +0000
+
+node-cbor (8.1.0+dfsg+~cs5.2.1-2) unstable; urgency=medium
+
+  * Fix autopkgtest
+
+ -- Yadd <yadd@debian.org>  Mon, 03 Oct 2022 10:36:26 +0200
+
+node-cbor (8.1.0+dfsg+~cs5.2.1-1) unstable; urgency=medium
+
+  * Add missing build dependency on dh-nodejs for command dh_nodejs_autodocs.
+  * Fix debian/watch
+  * New upstream version 8.1.0+dfsg+~cs5.2.1,
+    updates json-text-sequence from 1.0.0 to 1.0.1
+
+ -- Yadd <yadd@debian.org>  Mon, 03 Oct 2022 09:25:49 +0200
+
+node-cbor (8.1.0+dfsg+~cs5.2.0-3) unstable; urgency=medium
+
+  * Declare compliance with policy 4.6.1
+  * Fix configuration for webpack 5, add build dependencies to
+    node-buffer and node-stream-browserify (Closes: #1011867)
+
+ -- Yadd <yadd@debian.org>  Thu, 02 Jun 2022 14:49:25 +0200
+
+node-cbor (8.1.0+dfsg+~cs5.2.0-2) unstable; urgency=medium
+
+  * Source-only upload
+
+ -- Yadd <yadd@debian.org>  Fri, 22 Apr 2022 17:57:22 +0200
+
+node-cbor (8.1.0+dfsg+~cs5.2.0-1) unstable; urgency=medium
+
+  * Embed json-text-sequence and @sovpro/delimited-stream
+  * Build @sovpro/delimited-stream with tsc
+  * Build manpage with node-marked-man, not help2man
+
+ -- Yadd <yadd@debian.org>  Sun, 20 Mar 2022 20:47:04 +0100
+
+node-cbor (8.1.0+dfsg+~3.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1008023)
+
+ -- Yadd <yadd@debian.org>  Sun, 20 Mar 2022 19:04:11 +0100

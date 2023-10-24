@@ -1,0 +1,15 @@
+Description: don't install manpages in nodejs dir
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-03-20
+
+--- a/packages/cbor-cli/.npmignore
++++ b/packages/cbor-cli/.npmignore
+@@ -11,6 +11,7 @@
+ tools/
+ docs/
+ test/
++man/
+ man_src/
+ Dockerfile
+ .editorconfig

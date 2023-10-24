@@ -1,0 +1,41 @@
+{
+  "name": "parcel-demo",
+  "version": "8.1.0",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "rimraf -rf dist",
+    "build": "parcel build src/index-p.html --dist-dir dist --no-source-maps --public-url ./ --no-content-hash",
+    "deploy": "copyfiles -u1 dist/* ../../docs/example",
+    "predeploy": "npm run build"
+  },
+  "keywords": [],
+  "author": "Joe Hildebrand <joe-github@cursive.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hildjj/node-cbor.git",
+    "directory": "packages/parcel-demo"
+  },
+  "devDependencies": {
+    "@parcel/core": "^2.0.1",
+    "@parcel/optimizer-data-url": "^2.0.1",
+    "@parcel/transformer-inline-string": "^2.0.1",
+    "cbor": "^8.1.0",
+    "cbor-bigdecimal": "^8.1.0",
+    "copyfiles": "^2.4.1",
+    "node-inspect-extracted": "*",
+    "parcel": "2.0.1",
+    "postcss": "^8.3.11",
+    "regenerator-runtime": "^0.13.9",
+    "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "node": ">= 12.19"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ]
+}

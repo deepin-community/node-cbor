@@ -1,0 +1,7 @@
+# Same author
+add-component-copyright nofilter *
+add-component-copyright json-text-sequence *
+# Test data
+source-is-missing *packages/cbor/test/cases.js*
+source-contains-prebuilt-javascript-object *packages/cbor/test/cases.js*
+very-long-line-length-in-source-file *packages/cbor/test/cases.js*

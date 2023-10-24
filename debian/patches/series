@@ -1,0 +1,3 @@
+fix-webpack-paths.patch
+dont-install-manpage-in-nodejs-dir.patch
+fix-for-webpack5.patch
