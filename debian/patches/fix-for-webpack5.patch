@@ -1,0 +1,27 @@
+Description: fix for webpack 5
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1011867
+Forwarded: not-needed
+Last-Update: 2022-06-02
+
+--- a/packages/cbor-web/webpack.config.js
++++ b/packages/cbor-web/webpack.config.js
+@@ -15,14 +15,12 @@
+   resolve: {
+     symlinks: false,
+     modules: ['/usr/lib/nodejs', '/usr/share/nodejs', '../../packages', '../../node_modules'],
++    fallback: {
++      stream: require.resolve("stream-browserify"),
++      buffer: require.resolve("buffer/"),
++    },
+   },
+   resolveLoader: {
+     modules: ['/usr/lib/nodejs', '/usr/share/nodejs', '../../packages', '../../node_modules'],
+   },
+-  plugins: [
+-    new webpack.ProvidePlugin({
+-      process: 'process/browser',
+-    }),
+-  ],
+-
+ }

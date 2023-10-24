@@ -1,0 +1,7 @@
+cbor-cli/bin/cbor.js		/usr/bin/cbor
+cbor-cli/bin/cbor2comment.js	/usr/bin/cbor2comment
+cbor-cli/bin/cbor2diag.js	/usr/bin/cbor2diag
+cbor-cli/bin/cbor2js.js		/usr/bin/cbor2js
+cbor-cli/bin/cbor2json.js	/usr/bin/cbor2json
+cbor-cli/bin/js2cbor.js		/usr/bin/js2cbor
+cbor-cli/bin/json2cbor.js	/usr/bin/json2cbor

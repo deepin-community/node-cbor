@@ -1,0 +1,29 @@
+{
+  "name": "plain-demo",
+  "version": "8.1.0",
+  "description": "A demo for cbor-web with no bundler",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "predeploy": "npm run build",
+    "deploy": "copyfiles -u1 dist/* ../../docs/example"
+  },
+  "author": "Joe Hildebrand <joe-github@cursive.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hildjj/node-cbor.git",
+    "directory": "packages/plain-demo"
+  },
+  "devDependencies": {
+    "bignumber.js": "^9.0.1",
+    "browser-resolve": "^2.0.0",
+    "cbor-bigdecimal": "^8.1.0",
+    "cbor-web": "^8.1.0",
+    "copyfiles": "^2.4.1",
+    "node-inspect-extracted": "^1.0.8"
+  },
+  "engines": {
+    "node": ">=12.19"
+  }
+}

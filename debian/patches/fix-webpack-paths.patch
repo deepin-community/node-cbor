@@ -1,0 +1,21 @@
+Description: fix webpack paths
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-03-20
+
+--- a/packages/cbor-web/webpack.config.js
++++ b/packages/cbor-web/webpack.config.js
+@@ -14,9 +14,10 @@
+   target: 'web',
+   resolve: {
+     symlinks: false,
+-    fallback: {
+-      stream: 'stream-browserify',
+-    },
++    modules: ['/usr/lib/nodejs', '/usr/share/nodejs', '../../packages', '../../node_modules'],
++  },
++  resolveLoader: {
++    modules: ['/usr/lib/nodejs', '/usr/share/nodejs', '../../packages', '../../node_modules'],
+   },
+   plugins: [
+     new webpack.ProvidePlugin({

@@ -1,0 +1,63 @@
+{
+  "name": "cbor-cli",
+  "version": "8.1.0",
+  "description": "Command line tools to encode and parse data in the Concise Binary Object Representation (CBOR) data format (RFC8949).",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hildjj/node-cbor.git",
+    "directory": "pacakges/cbor-cli"
+  },
+  "homepage": "https://github.com/hildjj/node-cbor/tree/main/packages/cbor-cli",
+  "bin": {
+    "cbor": "bin/cbor.js",
+    "cbor2comment": "bin/cbor2comment.js",
+    "cbor2diag": "bin/cbor2diag.js",
+    "cbor2js": "bin/cbor2js.js",
+    "cbor2json": "bin/cbor2json.js",
+    "js2cbor": "bin/js2cbor.js",
+    "json2cbor": "bin/json2cbor.js"
+  },
+  "directories": {
+    "man": "man"
+  },
+  "scripts": {
+    "clean": "rimraf coverage .nyc_output/ man/*",
+    "lint": "eslint lib/*.js bin/* test/*.js",
+    "test": "ava",
+    "man": "mkdir -p man; for f in man_src/*.md; do b=`basename $f`; marked-man $f -o man/${b%.md}.1; gzip -9f man/${b%.md}.1; done",
+    "release": "npm version patch && git push --follow-tags && npm publish",
+    "typecheck": "tsc --allowJs --checkJs --noEmit --target ES6 --moduleResolution node lib/*.js",
+    "coverage": "nyc -r html ava",
+    "dev": "light-server -q -s. -w 'lib/*.js,test/*.js,bin/*.js # npm run coverage' -o /coverage/index.html"
+  },
+  "keywords": [
+    "coap",
+    "cbor",
+    "json",
+    "cli"
+  ],
+  "author": {
+    "name": "Joe Hildebrand",
+    "email": "joe-github@cursive.net"
+  },
+  "devDependencies": {
+    "marked": "^0.7.0",
+    "marked-man": "^0.7.0",
+    "mock-stdio": "^1.0.3",
+    "nofilter": "^3.1.0",
+    "p-event": "^4.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "bignumber.js": "^9.0.1",
+    "cbor": "^8.1.0",
+    "cbor-bigdecimal": "^8.1.0",
+    "commander": "^8.3.0",
+    "json-text-sequence": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=12.19"
+  }
+}

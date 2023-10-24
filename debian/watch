@@ -1,0 +1,27 @@
+version=4
+opts=\
+dversionmangle=auto,\
+repacksuffix=+dfsg,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-cbor-$1/ \
+ https://github.com/hildjj/node-cbor/tags .*/archive.*/v?([\d\.]+).tar.gz group
+
+opts=\
+component=json-text-sequence,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-json-text-sequence-$1/ \
+ https://github.com/hildjj/json-text-sequence/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+component=nofilter,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-nofilter-$1/ \
+ https://github.com/hildjj/nofilter/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+component=sovpro-delimited-stream,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-delimited-stream-$1/ \
+ https://github.com/sovpro/delimited-stream/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
